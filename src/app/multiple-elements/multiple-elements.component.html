@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <div
+      class="rectangle upper"
+      [ngStyle]="upperStyle"
+      mwlResizable
+      [validateResize]="validate"
+      [enableGhostResize]="true"
+      (resizeEnd)="onResizeEnd($event, 'upper')"
+    >
+      Angular Resizable Element
+    </div>
+  
+    <div
+      class="rectangle middle"
+      [ngStyle]="middleStyle"
+      mwlResizable
+      [validateResize]="validate"
+      [enableGhostResize]="true"
+      [resizeSnapGrid]="{ left: 1, right: 1 }"
+      (resizeEnd)="onResizeEnd($event, 'middle')"
+    >
+      Angular Resizable Element From Top
+      <div
+        class="resize-handle-top"
+        mwlResizeHandle
+        [resizeEdges]="{ top: true }"
+      ></div>
+    </div>
+  
+    <div
+      class="rectangle lower"
+      [ngStyle]="lowerStyle"
+      mwlResizable
+      [validateResize]="validate"
+      [enableGhostResize]="true"
+      [resizeSnapGrid]="{ left: 1, right: 1 }"
+      (resizeEnd)="onResizeEnd($event, 'lower')"
+    >
+      Angular Resizable Element From Top
+      <div
+        class="resize-handle-top"
+        mwlResizeHandle
+        [resizeEdges]="{ top: true }"
+      ></div>
+    </div>
+  </div>
+  
